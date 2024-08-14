@@ -1099,6 +1099,11 @@ h3 {
 	width:80%;
 	margin:0 auto;
 				}
+
+	.who-care-img {
+		background-position: right!important;
+	}
+
 }
 
 @media only screen and (min-width: 250px) and (max-width: 480px) { 
@@ -1165,7 +1170,9 @@ h3 {
 	#donate-btn { 
 		width:100%;
 	}
-	
+	.who-care-img {
+		background-position: right!important;
+	}
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) { 	
@@ -1215,6 +1222,10 @@ h3 {
 		margin:0 auto;
 		width:330px;
 	}
+	.who-care-img {
+		background-position: right!important;
+	}
+
 	
 }
 
@@ -1227,6 +1238,10 @@ h3 {
 	.footer-div .col-sm-12  {
 		padding:0;
 	}	
+
+	.who-care-img {
+		background-position: right!important;
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) { 	
