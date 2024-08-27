@@ -95,7 +95,6 @@ h3 {
 	font-size:20px;
 	font-weight:600;
 	line-height:26px;
-	text-transform:capitalize;
 }
 
 h1,
@@ -374,11 +373,12 @@ opacity: 1;
 	margin-bottom:25px;	
 }
 
-.header-div p, .header2-div p{color:#ffffff;
+.header-div p, .header2-div p{
+	color:#ffffff;
 	font-size:14px;
 	letter-spacing:0.5px;
 	line-height:28px;
-	text-transform: uppercase;}
+}
 
 .header-div p {
 	margin:0 auto;
@@ -399,12 +399,12 @@ opacity: 1;
 	background-repeat:no-repeat;} 
 	
 .header2-bgimage {
-    background-image: url("../../images/1500x780x2.jpg");
+    
 }
 .header2-section-space{padding:200px 0;}
 
 .header3-bgimage {
-    background-image: url("../../images/1500x780x3.jpg");
+   
 }
 
 /*============================================= 6.SECTION : HEADER END ======================================================*/
@@ -576,12 +576,13 @@ opacity: 1;
 }
 
 .orphan-children-section {
-	background-image: url("../../images/1500x700.jpg");	
+	
 }
 
 .orphan-children-col {
 	background-color:#0b193f;
-	padding:40px 10px 60px 10px;
+	padding:40px 10px 40px 10px;
+	border-radius: 10px;
 }
 
 .orphan-children-col p,
@@ -1030,7 +1031,7 @@ h3 {
 }
 
 .img-p-t {
-
+	object-position: top;
 }
 
 .btn-hover:hover {
@@ -1120,6 +1121,58 @@ h3 {
   align-items: center;
 }
 
+.p-tb-lr {
+	padding: 10px 40px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /*============================================= 16.SECTION : FOOTER START ===============================================*/
 
 /*============================================= 17.SECTION : MEDIA QUERIES START ===============================================*/
@@ -1171,6 +1224,10 @@ h3 {
 
 	.who-care-img {
 		background-position: right!important;
+	}
+
+	.header-image {
+    padding-top: 100px;
 	}
 
 }
@@ -1242,6 +1299,9 @@ h3 {
 	.who-care-img {
 		background-position: right!important;
 	}
+	.header-image {
+    padding-top: 100px;
+	}
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) { 	
@@ -1295,7 +1355,9 @@ h3 {
 		background-position: right!important;
 	}
 
-	
+	.header-image {
+    padding-top: 100px;
+	}
 }
 
 
@@ -1310,6 +1372,9 @@ h3 {
 
 	.who-care-img {
 		background-position: right!important;
+	}
+	.header-image {
+    padding-top: 100px;
 	}
 }
 
