@@ -92,6 +92,16 @@
 				scrollTop: $(hash_tag).offset().top - 50
 			}, 2000);	
 			return false;
+		});	
+
+		$( "#donateButton" ).on( "click", ".pagescroll", function( event ) {	
+		debugger;				
+				event.preventDefault();	
+				var hash_tag= $(this).attr('href');
+				$('html, body').animate({
+				scrollTop: $(hash_tag).offset().top - 50
+			}, 2000);	
+			return false;
 		});		
 		
 		
