@@ -1,6 +1,6 @@
 <?php   
-require("assets/PHPMailer-master/src/PHPMailer.php");
-require("assets/PHPMailer-master/src/SMTP.php");
+require("PHPMailer-master/src/PHPMailer.php");
+require("PHPMailer-master/src/SMTP.php");
 
 
 $recipientEmail='atendimento@farmawegman.com.br';
@@ -40,6 +40,6 @@ $senderMessage = $_POST['p_message'];
 	echo '<div class="alert alert-danger" role="alert">Error: '. $mail->ErrorInfo.'</div>';
 } else {
 	//echo '<div class="alert alert-success" role="alert">Obrigado por entrar em contato!. Mensagem enviada com sucesso.</div>';
-    header('Location: https://solutpisos.com.br/contato-sucesso');
+    header('Location: /');
 }
 ?>
