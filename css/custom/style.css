@@ -1300,6 +1300,7 @@ h3 {
 		background-position: right!important;
 	}
 	.header-image {
+		background-image: url(../../images/Fachada-Home-Mobile.png);
     padding-top: 100px;
 	}
 }
