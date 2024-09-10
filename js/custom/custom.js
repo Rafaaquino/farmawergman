@@ -94,8 +94,7 @@
 			return false;
 		});	
 
-		$( "#donateButton" ).on( "click", ".pagescroll", function( event ) {	
-		debugger;				
+		$( "#donateButton" ).on( "click", ".pagescroll", function( event ) {					
 				event.preventDefault();	
 				var hash_tag= $(this).attr('href');
 				$('html, body').animate({
@@ -158,6 +157,28 @@
 		});
 		
 		
+		//ENVIO DE EMAIL
+
+	    var contactForm = $("#contact-form");
+	    var contactResult = $("#contact-result");
+	    contactForm.validate({
+	      debug: false,
+	      submitHandler: function (contactForm) {
+	        $(contactResult, contactForm).html("Enviando...");
+	        $.ajax({
+	          type: "POST",
+	          url: "sendmail.php",
+	          data: $(contactForm).serialize(),
+	          timeout: 20000,
+	          success: function (msg) {
+	            window.location.href =
+	              "/";
+	          },
+	          error: $(".thanks").show(),
+	        });
+	        return false;
+	      },
+	    });
 		
 	
 		//SELECT BOX VALUE POPULATE IN TEXT BOX

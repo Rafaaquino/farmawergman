@@ -616,19 +616,20 @@
 				</div>
 				<div class="col-sm-12">
 					<div class="row contact-row">
-						<form id="contactForm" action="submit_form.php" method="POST">
+						<form id="contact-form" method="post" action="#">
 		                    <div class="form-group">
-		                        <input type="text" class="form-control" placeholder="Nome" id="name" name="name" placeholder="Your Name" required>
+		                        <input type="text" class="form-control" placeholder="Nome" id="p_name" name="p_name" placeholder="Your Name" required>
 		                    </div>
 		                    <div class="form-group">
-		                        <input type="email" class="form-control" placeholder="Email" id="email" name="email" placeholder="Your Email" required>
+		                        <input type="email" class="form-control" placeholder="Email" id="p_email" name="p_email" placeholder="Your Email" required>
 		                    </div>
 		                    <div class="form-group">
-		                        <input type="text" class="form-control" placeholder="Assunto" id="subject" name="subject" placeholder="Subject" required>
+		                        <input type="text" class="form-control" placeholder="Assunto" id="p_subject" name="p_subject" placeholder="Subject" required>
 		                    </div>
 		                    <div class="form-group">
-		                        <textarea class="form-control" id="message" placeholder="Digite a mensagem..." name="message" rows="5" placeholder="Your Message" required></textarea>
+		                        <textarea class="form-control" placeholder="Digite a mensagem..." id="p_message" name="p_message" rows="5" placeholder="Your Message" required></textarea>
 		                    </div>
+		                    <div id="contact-result"></div>
 		                    <button type="submit" class="btn">Enviar Mensagem</button>
 		                </form>
 		            </div>
