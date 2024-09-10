@@ -160,25 +160,32 @@
 		//ENVIO DE EMAIL
 
 	    var contactForm = $("#contact-form");
-	    var contactResult = $("#contact-result");
-	    contactForm.validate({
-	      debug: false,
-	      submitHandler: function (contactForm) {
-	        $(contactResult, contactForm).html("Enviando...");
-	        $.ajax({
-	          type: "POST",
-	          url: "sendmail.php",
-	          data: $(contactForm).serialize(),
-	          timeout: 20000,
-	          success: function (msg) {
-	            window.location.href =
-	              "/";
-	          },
-	          error: $(".thanks").show(),
-	        });
-	        return false;
-	      },
-	    });
+		var contactResult = $("#contact-result");
+
+		contactForm.validate({
+		  debug: false,
+		  submitHandler: function (contactForm) {
+		    $(contactResult, contactForm).html("Enviando...");
+		    $.ajax({
+		      type: "POST",
+		      url: "sendemail.php", // Atualize o caminho para o seu PHP
+		      data: $(contactForm).serialize(),
+		      timeout: 20000,
+		      success: function (response) {
+		        if (response === 'success') {
+		          $(contactResult).html('<p>Mensagem enviada com sucesso!</p>');
+		          window.location.href = "/";
+		        } else {
+		          $(contactResult).html('<p>Ocorreu um erro ao enviar a mensagem. Tente novamente.</p>');
+		        }
+		      },
+		      error: function () {
+		        $(contactResult).html('<p>Ocorreu um erro ao enviar a mensagem. Tente novamente.</p>');
+		      }
+		    });
+		    return false;
+		  },
+		});
 		
 	
 		//SELECT BOX VALUE POPULATE IN TEXT BOX

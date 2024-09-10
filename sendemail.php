@@ -3,7 +3,7 @@ require("PHPMailer-master/src/PHPMailer.php");
 require("PHPMailer-master/src/SMTP.php");
 
 
-$recipientEmail='atendimento@farmawegman.com.br';
+$recipientEmail='contato@farmawegman.com.br';
 $recipientName='Farmawegan';
 
 //collect the posted variables into local variables before calling $mail = new mailer
@@ -19,9 +19,9 @@ $senderMessage = $_POST['p_message'];
  $mail->SMTPAuth = true; // authentication enabled
  $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
  $mail->Host = "mail.farmawegman.com.br";
- $mail->Port = 465; // or 587
+ $mail->Port = 587; // or 587
  $mail->IsHTML(true);
- $mail->Username = "atendimento@farmawegman.com.br";
+ $mail->Username = "contato@farmawegman.com.br";
  $mail->Password = "Farma@#$9089kjQ@";
 
  $mail->SetFrom($recipientEmail, $recipientName);
@@ -40,6 +40,6 @@ $senderMessage = $_POST['p_message'];
 	echo '<div class="alert alert-danger" role="alert">Error: '. $mail->ErrorInfo.'</div>';
 } else {
 	//echo '<div class="alert alert-success" role="alert">Obrigado por entrar em contato!. Mensagem enviada com sucesso.</div>';
-    header('Location: /');
+    header('Location: https://farmawegman.com.br/');
 }
 ?>
